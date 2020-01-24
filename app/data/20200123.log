@@ -1,0 +1,81 @@
+20200123
+20200123
+20200123
+20200123
+{
+  "login": "fernando",
+  "id": 36909007,
+  "node_id": "MDQ6VXNlcjM2OTA5MDA3",
+  "avatar_url": "https://avatars2.githubusercontent.com/u/36909007?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/fernando",
+  "html_url": "https://github.com/fernando",
+  "followers_url": "https://api.github.com/users/fernando/followers",
+  "following_url": "https://api.github.com/users/fernando/following{/other_user}",
+  "gists_url": "https://api.github.com/users/fernando/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/fernando/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/fernando/subscriptions",
+  "organizations_url": "https://api.github.com/users/fernando/orgs",
+  "repos_url": "https://api.github.com/users/fernando/repos",
+  "events_url": "https://api.github.com/users/fernando/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/fernando/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Fernando",
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "public_repos": 4,
+  "public_gists": 0,
+  "followers": 1,
+  "following": 0,
+  "created_at": "2018-02-28T03:42:13Z",
+  "updated_at": "2020-01-16T05:37:08Z"
+}
+
+{"BRL_USD":0.239854}
+{
+  "login": "fernando",
+  "id": 36909007,
+  "node_id": "MDQ6VXNlcjM2OTA5MDA3",
+  "avatar_url": "https://avatars2.githubusercontent.com/u/36909007?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/fernando",
+  "html_url": "https://github.com/fernando",
+  "followers_url": "https://api.github.com/users/fernando/followers",
+  "following_url": "https://api.github.com/users/fernando/following{/other_user}",
+  "gists_url": "https://api.github.com/users/fernando/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/fernando/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/fernando/subscriptions",
+  "organizations_url": "https://api.github.com/users/fernando/orgs",
+  "repos_url": "https://api.github.com/users/fernando/repos",
+  "events_url": "https://api.github.com/users/fernando/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/fernando/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Fernando",
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "public_repos": 4,
+  "public_gists": 0,
+  "followers": 1,
+  "following": 0,
+  "created_at": "2018-02-28T03:42:13Z",
+  "updated_at": "2020-01-16T05:37:08Z"
+}
+
+{"BRL_USD":0.239854}
+{"BRL_EUR":0.216975}
+{"BRL_CNY":1.663797}
+{"BRL_ARS":14.407882}
+{"BRL_MXN":4.502235}
+{"BRL_VEF":2.395544}
+{"BRL_UYU":8.971465}
+{"BRL_CLP":186.29461}

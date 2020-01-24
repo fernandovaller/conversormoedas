@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Conversor de Moedas - Projetos - Fernando Valler</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="<?=URL?>/css/style.css?v=<?=filemtime('css/style.css')?>" rel="stylesheet" media="all">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="text-center display-4 my-3">Conversor de Moedas</h1>
+
+    <div class="row">
+
+      <form action="" id="form-valor" onsubmit="return false" class="col-sm-6  offset-sm-3">
+
+        <div class="form-group">
+          <h5 class="text-center">Informe o valor a ser convertido</h5>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <input type="numeric" id="moeda" class="form-control form-control-lg moeda" placeholder="R$ 0,00">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-outline-secondary btn-converter" id="button-addon2">Converter</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div> <!-- row -->
+
+    <p class="text-center small text-muted">Os valores apresentados são em relação a conversão de Real (BRL) para outros moedas do mundo.</p>
+
+
+    <div class="moedas my-4">
+
+      <div class="row">
+
+        <?php
+        $moeda = new App\Moeda();
+        $moedas = $moeda->getAll();
+        if($moedas)
+          foreach ($moedas as $key => $row) :
+            ?>
+            <div class="media col-sm-4">
+              <img src="/img/<?=$row['codigo']?>.png" class="mr-3" alt="<?=$row['pais']?>" title="<?=$row['pais']?>">
+              <div class="media-body">
+                <span class="d-inline-block"><?=$row['simbol']?></span>
+                <h5 id="BRL_<?=$row['codigo']?>" data-id="BRL_<?=$row['codigo']?>" class="mt-0 d-inline vlrmoeda">0</h5>
+                <span class="d-block"><?=$row['moeda']?></span>
+              </div>
+            </div>
+          <?php endforeach; ?>
+
+        </div>
+
+      </div>
+
+      <footer>
+
+        <p class="text-center text-muted small mb-0" >Projeto desenvolvido por &copy; Fernando Valler <?=date("Y")?> - <a href="https://fernandovaller.com" target="_black" rel="noopener">fernandovaller.com</a> - <?=App\Cotacao::dataUltimaCotacao()?></p>
+      </footer>
+
+    </div> <!-- container -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha256-Kg2zTcFO9LXOc7IwcBx1YeUBJmekycsnTsq2RuFHSZU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+    <script src="/js/script.js?v=<?=filemtime('js/script.js')?>"></script>
+  </body>
+  </html>
