@@ -1,19 +1,29 @@
-# SicPages
+# Conversor de Moedas
 
-O SicPages é um simples Framework em php usado como base para o desenvolvimento de novos projetos. Possui um conceito simples e prático.
+O projeto Conversor de Moedas foi desenvolvido para permitir a comparação de valores entre a moeda brasileira (Real) em relação as principais moedas do mundo e da América Latina. Nesse projeto foi usado framework Bootstrap 4, jQuery, PHP  e MySQL.
 
-  - Separação de áreas (sistemas) por pasta
-  - Dentro de cada área temos os modulos separados por pastas e em cada pasta os arquivos resposveis pelo modulo.
+Conheça o projeto: [https://conversormoedas.fvaller.com/](https://conversormoedas.fvaller.com/)
 
-## Installation & Usage
+## Installation
 
-* in root folder project
+Na pasta do projeto tem o arquivo com o banco de dados, você deve configurar um novo banco de dados e importar as tabelas.
 
-`$ compose install`
+Configure o arquivo `.env` com as credencias do banco.
 
-* in folder project /public
+No terminal dentro da pasta do projeto rode o comando:
 
-`$ php -S localhost:8080`
+```bash
+composer install
+```
+
+## Cotações das moedas
+
+Para obter as cotações consiga uma chave para acesso a API no site https://free.currencyconverterapi.com
+
+Informe ela no arquivo `config.php` dentro da pasta `app/` em `API_KEY`
+
+Para obter as cotações você deve programar uma chamada para o caminho /ajax/cotacoes-obter/?key=UMA-CHAVE-QUALQUER essa chave você deve criar e informa no `config.php` em `API_KEY_LOCAL`
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

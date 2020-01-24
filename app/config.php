@@ -19,6 +19,7 @@ define('PATH_UPLOADS', 'uploads');
 
 //API https://free.currencyconverterapi.com/free-api-key
 define('API_KEY', '');
+define('API_KEY_LOCAL', 'UMA-CHAVE-QUALQUER');
 
 //pasta padrao do sistema dentro de APP
 $CONFIG['default_router'] = '';
